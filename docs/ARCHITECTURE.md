@@ -37,14 +37,17 @@ src/
 ├── components/ — componentes reutilizables de UI  
 ├── layouts/ — layouts base compartidos entre páginas  
 ├── lib/  
-│ ├── sanity.js — cliente de Sanity y configuración  
+│ ├── sanity.ts — cliente de Sanity y configuración  
 │ └── queries/ — queries GROQ separadas por tipo de contenido  
 ├── pages/ — rutas del sitio, una carpeta por sección  
 └── styles/ — estilos globales
 
 sanity/  
-├── schemas/ — definición de tipos de contenido  
-└── sanity.config.js — configuración de Sanity Studio
+├── schemaTypes/  
+│ ├── index.ts — junta todos los schemas en un array y se exporta a sanity.config.ts  
+│ └── (un archivo .ts por cada tipo de contenido)  
+├── sanity.config.ts — configuración de Sanity Studio  
+└── sanity.cli.ts — configuración de la CLI (projectId, dataset)
 
 ---
 
