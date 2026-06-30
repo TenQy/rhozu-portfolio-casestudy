@@ -61,7 +61,6 @@ Document type - Elemento con información para agregar, editar y eliminar certif
 - **date** `date` not null - Fecha del certificado
 - **academyUrl** `url` not null - Enlace al certificado dentro de la academia
 - **academy** `string` not null - Nombre de la asociación/academia del certificado
-- **relatedPost** `reference -> Post` nullable - Post relacionado con la experiencia del certificado
 - **featured** `boolean` not null default false - Flag para saber si mostrar en landing o no
 
 En la landing se muestran los tres certificados más valiosos, el usuario deberá poder modificar cuales quiere que se muestren activando el campo featured.
@@ -99,6 +98,7 @@ Document type - Elemento con información para agregar, editar y eliminar posts 
 - **cover** `image` not null - Portada del post 
 - **content** `portableText` not null - Contenido del Post
 - **slug** `slug` not null - Enlace al post
+- **relatedCertification** `reference -> Certification` nullable - Certificado relacionado al post
 
 ---
 
